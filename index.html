@@ -35,12 +35,13 @@
             </div>
 
             <div class="flex items-center justify-center space-x-6">
-                <label for="file-upload" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white p-3.5 rounded-full cursor-pointer transition shadow-lg shadow-purple-900/60">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- Fixed Upload Button with wrapped input -->
+                <label for="file-upload" class="relative bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white p-3.5 rounded-full cursor-pointer transition shadow-lg shadow-purple-900/60 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
+                    <input type="file" id="file-upload" accept="audio/*" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
                 </label>
-                <input type="file" id="file-upload" accept="audio/*" class="hidden">
 
                 <button id="play-btn" class="bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-300 hover:to-pink-300 text-slate-950 p-4 rounded-full transition shadow-lg shadow-purple-500/40">
                     <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -57,5 +58,4 @@
 
     <script src="script.js"></script>
 </body>
-          </html>
-          
+</html>
