@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Vibe - Audio Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col justify-between p-4 font-sans select-none">
+
+    <header class="text-center py-2 relative z-10">
+        <h1 class="text-2xl font-extrabold tracking-wider text-purple-300 drop-shadow-[0_2px_10px_rgba(168,85,247,0.9)]">SONIC VIBE</h1>
+        <p class="text-xs text-purple-200/90 font-medium drop-shadow">Offline PWA Audio Visualizer</p>
+    </header>
+
+    <main class="flex-1 flex flex-col items-center justify-center max-w-md mx-auto w-full space-y-6 relative z-10">
+        
+        <div class="relative w-full aspect-square max-h-[300px] bg-black/60 rounded-2xl overflow-hidden border border-purple-500/50 shadow-2xl flex items-center justify-center backdrop-blur-md">
+            <canvas id="visualizer" class="absolute inset-0 w-full h-full"></canvas>
+            <div id="track-info" class="absolute bottom-4 text-center z-10 px-4 pointer-events-none">
+                <p id="track-title" class="text-sm font-bold text-purple-200 drop-shadow truncate">No Track Selected</p>
+                <p id="track-artist" class="text-xs text-purple-300/80 drop-shadow">Tap upload to play</p>
+            </div>
+        </div>
+
+        <div class="w-full bg-black/75 backdrop-blur-md p-5 rounded-2xl border border-purple-500/50 space-y-4 shadow-xl">
+            <div class="space-y-1">
+                <input type="range" id="progress-bar" value="0" max="100" class="w-full accent-purple-400 bg-slate-700 h-1.5 rounded-lg cursor-pointer">
+                <div class="flex justify-between text-[10px] text-purple-200/90 font-mono font-semibold">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-6">
+                <label for="file-upload" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white p-3.5 rounded-full cursor-pointer transition shadow-lg shadow-purple-900/60">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </label>
+                <input type="file" id="file-upload" accept="audio/*" class="hidden">
+
+                <button id="play-btn" class="bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-300 hover:to-pink-300 text-slate-950 p-4 rounded-full transition shadow-lg shadow-purple-500/40">
+                    <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center text-xs text-purple-200/70 py-2 relative z-10 drop-shadow">
+        Built with Acode for Mobile Developers
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+          </html>
+          
