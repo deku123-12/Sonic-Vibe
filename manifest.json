@@ -1,10 +1,16 @@
 {
   "name": "Sonic Vibe",
   "short_name": "SonicVibe",
+  "description": "An offline music player and audio visualizer created by Lim3rd.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f1519",
   "theme_color": "#7e22ce",
+  "categories": [
+    "music",
+    "audio",
+    "entertainment"
+  ],
   "icons": [
     {
       "src": "LIM3RD_RedNote_Cover.png",
