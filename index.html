@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonic Vibe - Audio Visualizer</title>
+    <title>Lim3rd Music Player- Audio Visualizer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
@@ -12,7 +12,7 @@
 
     <header class="text-center py-2 relative z-10">
         <h1 class="text-2xl font-extrabold tracking-wider text-purple-300 drop-shadow-[0_2px_10px_rgba(168,85,247,0.9)]">SONIC VIBE</h1>
-        <p class="text-xs text-purple-200/90 font-medium drop-shadow">Offline PWA Audio Visualizer</p>
+        <p class="text-xs text-purple-200/90 font-medium drop-shadow">Offline Music Player Made By Lim3rd</p>
     </header>
 
     <main class="flex-1 flex flex-col items-center justify-center max-w-md mx-auto w-full space-y-4 relative z-10 my-2">
@@ -21,7 +21,7 @@
             <canvas id="visualizer" class="absolute inset-0 w-full h-full"></canvas>
             <div id="track-info" class="absolute bottom-4 text-center z-10 px-4 pointer-events-none">
                 <p id="track-title" class="text-sm font-bold text-purple-200 drop-shadow truncate">No Track Selected</p>
-                <p id="track-artist" class="text-xs text-purple-300/80 drop-shadow">Tap upload to play</p>
+                <p id="track-artist" class="text-xs text-purple-300/80 drop-shadow">Lim3rd Music</p>
             </div>
         </div>
 
@@ -43,7 +43,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
-                    <input type="file" id="file-upload" accept="audio/*" multiple class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                    
+                    <input type="file" id="file-upload" accept="audio/*" multiple webkitdirectory directory class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
                 </label>
 
                 <button id="play-btn" class="bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-300 hover:to-pink-300 text-slate-950 p-4 rounded-full transition shadow-lg shadow-purple-500/40">
@@ -61,14 +62,14 @@
         <div class="w-full bg-black/60 backdrop-blur-md p-3 rounded-2xl border border-purple-500/30 max-h-36 overflow-y-auto space-y-1 shadow-inner">
             <p class="text-[11px] font-bold text-purple-300/80 px-1 uppercase tracking-wider">Playlist (<span id="playlist-count">0</span>)</p>
             <div id="playlist-container" class="space-y-1">
-                <p class="text-xs text-slate-400 text-center py-2 italic">No tracks loaded yet. Tap '+' to add music.</p>
+                <p class="text-xs text-slate-400 text-center py-2 italic">No tracks loaded yet. Tap '+' to scan folder.</p>
             </div>
         </div>
 
     </main>
 
     <footer class="text-center text-xs text-purple-200/70 py-2 relative z-10 drop-shadow">
-        Built by Ricky Moguel and Team Legions
+        Built by Lim3rd and Team Legions
     </footer>
 
     <script src="script.js"></script>
